@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta Cep</title>
+    <link rel="sortcut icon" href="img/icone aba.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top  navbar-light" style="background-color: #0066cc;">
+            <div class="container-fluid">
+                <a href="index.html"><img src="img/Logo.png" alt="Consulta Cep"></a>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="00000-000" id="cep">
+                    <button class="btn btn-success" type="button" onclick="consultarCep()">Consultar</button>
+                </form>
+          </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <article>
+      <section>
+          <div id="carousel-imagens">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./img/Imagens carrousel/1.jpeg" class="d-block w-100" alt="imagem" style=" height: 42rem; ">
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/Imagens carrousel/2.jpeg" class="d-block w-100" alt="imagem" style=" height: 42rem; ">
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/Imagens carrousel/3.jpeg" class="d-block w-100" alt="imagem" style=" height: 42rem; ">
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/Imagens carrousel/4.jpg" class="d-block w-100" alt="imagem" style=" height: 42rem; ">
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/Imagens carrousel/5.jpg" class="d-block w-100" alt="imagem" style=" height: 42rem; ">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+      </section>
+      <div class="tabela">
+        <h3 class="resultado">Resultado</h3>
+          <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <td>Logradouro</td>
+                  <td id="logradouro"></td>   
+                </tr>
+                <tr>
+                  <td>Bairro</td>
+                  <td id="bairro"></td>
+                </tr>
+                <tr>
+                  <td>Localidade</td>
+                  <td id="localidade"></td>
+                </tr>
+                <tr>
+                  <td>UF</td>
+                  <td id="uf"></td>
+                </tr>
+                <tr>
+                  <td>DDD</td>
+                  <td id="ddd"></td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <section>
+        <div class="box-frase">
+          <p class="frase">Uma forma simples de consultar cep's de maneira rápida e segura!<br> 
+          Bem prático e com grandes detalhes sobre a localização.</p>
+        </div>
+        <div class="box-duvidas">
+          <h3 class="titulo" >O que significa?</h3>
+        </div>
+        <div class="conteudo">
+          <div class="box-respostas">
+            <h3>Logradouro</h3>
+            <p class="respostas">
+              Há várias definições, mas o mais comum é para nomear um endereço ou "lugar livre destinado à circulação pública <br>
+              de pedestres e veículos, tal como ruas, avenidas, praças, viadutos etc."
+            </p>
+            <br>
+            <br>
+            <h3>Bairro</h3>
+            <p class="respostas">
+              Bairro é uma comunidade ou região dentro de uma cidade ou município, sendo a unidade mínima de urbanização <br>
+              existente na maioria das cidades do mundo.
+            </p>
+            <br>
+            <br>
+            <h3>UF</h3>
+            <br>
+            <p class="respostas">
+              Em sua tradução, a sigla significa Unidade Federativa e é a distribuição dos estados que compõem a federação <br>
+              como um todo. ... São Paulo, Rio Grande do Sul e Bahia, por exemplo, são unidades federativas.
+            </p>
+            <br>
+            <br>
+            <h3>DDD</h3>
+            <p class="respostas">
+              Discagem direta internacional é, no Brasil, o sistema que consiste na discagem internacional automática através <br>
+              da inserção de prefixos internacionais e regionais, que se tornou possível graças à automação dos sistemas de <br>
+              telefonia e à telefonia via satélites e cabos submarinos.
+            </p>
+          </div>
+          <br>
+          <br>
+        </div>
+    </article>
+    <footer id="final-pag">
+      <br>
+      <div class="image-final">
+          <img src="./img/logo.png" alt="Series Full" width="110px" height="30px">
+      </div>
+      <div class="direitos">
+          <p> | 2021 Todos os direitos reservados.</p>
+      </div>
+    </footer> 
+</body>
+</html>

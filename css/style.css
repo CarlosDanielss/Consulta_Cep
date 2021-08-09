@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(235, 238, 240, 0.849);
+}
+
+section {
+    text-align: center;
+}
+
+.box-frase {
+    margin-top: 5rem;
+}
+
+.frase {
+    font-size: 29px;
+    color:rgba(56, 55, 55, 0.89);
+    transition: 0.2s;
+}
+.frase:hover {
+    color: black;
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.conteudo {
+    background-color:rgb(236, 239, 240);
+}
+
+.box-duvidas {
+    margin-top: 6rem;
+}
+
+.titulo {
+    color: rgb(18, 90, 199);
+    font-size: 31px;
+}
+
+.box-respostas {
+    margin-top: 2rem;
+}
+
+#final-pag{
+    margin-top: 15px;
+    display: flex;
+    background-color: #0066cc;
+}
+.image-final{
+    margin-top:4px;
+}
+.direitos{
+    margin-top: 8px;
+}
+
+.tabela {
+    margin-left: 287px;
+    margin-right: 280px;
+    margin-top: 40px;
+}
